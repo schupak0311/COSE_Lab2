@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+      </head>
+<body>
+
+<nav class="navbar navbar-dark bg-dark navbar-dark" role="navigation">
+    <div class="navbar-header">
+        <a class="navbar-brand text-center" href="/">Forum Analyzer</a>
+    </div>
+</nav>
+<br>
+<h2 class="text-center" style="color:rgb(12, 69, 150)"> {{ title_name }} </h2>
+<div class="container">
+    <canvas id="chart" class="canvas"></canvas>
+    <!-- <div class="col-md-2 col-md-offset-1">
+        <a href="{{ title_url }}" role="button" class="btn btn-success">Jump to source</a>
+    </div> -->
+    <div>
+        <div class="w3-table w3-striped">
+            <table class="table">
+                <thead class="thead-dark">
+                <tr>
+                    <th>Author</th>
+                    <th>count</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for author, messages_count in author_mess_count.items() %}
+                    <tr>
+                        <td>{{ author }}</td>
+                        <td>{{ messages_count }}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
